@@ -14,26 +14,26 @@ export default {
 
   setup: {
     greeting: {
-      title: "SOLAR dVPN: Community Edition",
-      text: "SOLAR dVPN Community Edition is build on top of fully open-source solution for Sentinel designed by SOLAR Labs",
+      title: "<span class='text-blue'>Blue</span>VPN",
+      text: "With <span class='text-blue'>BlueVPN</span> your traffic is <span class='text-blue'>encrypted</span>, your IP address is hidden, and above all, your <span class='text-blue'>privacy</span> is upheld",
     },
     complete: {
       title: "You’re all set!",
-      text: "Enjoy secure & censorship-free connectivity with dVPN!",
-      continue: "Awesome! Let’s go!",
+      text: "Enjoy <span class='text-blue'>secure</span> & <span class='text-blue'>censorship</span>-free connectivity <span class='text-blue'>with dVPN!</span>",
+      continue: "Let’s go!",
     },
     mnemonic: {
       create: {
         title: "You’ll need a mnemonic",
-        text: "Mnemonic is a special 24-word phrase which is used as a key to your blockchain account.",
+        text: "Mnemonic is a <span class='text-blue'>special</span> 24-word phrase which is used as a key to your blockchain <span class='text-blue'>account</span>.",
       },
       check: {
         title: "Here’s your mnemonic",
-        text: "Keep it secret — it is your key to your blockchain account. Write it down on a piece of paper & store in a safe place.",
-        timerTitle: "Just making sure you write it down :)",
+        text: "Keep it <span class='text-blue'>secret</span> — it is your key to your blockchain account. Write it down on a piece of paper & store in a <span class='text-blue'>safe</span> place.",
+        timerTitle: "Just making sure you write it down 🙂",
       },
       action: {
-        create: "Create a new mnemonic",
+        create: "Create new mnemonic",
         recover: "I already have a mnemonic",
         confirmCheck: "OK, I wrote it down",
       },
@@ -50,16 +50,11 @@ export default {
       text: "This will stop all active VPN sessions under your account and will turn your protection off. Use this for troubleshooting only.",
       button: "Stop sessions",
     },
-    removeConfigurations: {
-      title: "Remove VPN configurations",
-      text: "This will remove all the VPN configuration changes done by SOLAR dVPN and will turn your protection off. Use this for troubleshooting only.",
-      button: "Reset VPN configuration",
-    },
   },
 
   connection: {
     disconnect: "Disconnect",
-    connect: "Connect to dVPN",
+    connect: "Connect",
     youAre: "You are",
     protected: "Protected",
     unprotected: "Unprotected",

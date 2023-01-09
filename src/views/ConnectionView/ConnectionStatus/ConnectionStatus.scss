@@ -1,34 +1,37 @@
 .connection-status {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   background: url("/assets/images/world-map-unprotected.svg") center center no-repeat;
-  background-size: 155%;
+  background-size: 100%;
+  color: var(--slr__connection-txt-danger-clr);
 
   &__card-text {
-    text-transform: uppercase;
-    color: var(--slr__txt-clr);
-    @include font-template(12px, 14px, 100);
+    @include font-template(16px, 24px, 400);
   }
 
   &__card-status-text {
-    text-transform: uppercase;
-    color: var(--slr__connection-txt-danger-clr);
-    @include font-template(19px, 23px, 100);
+    @include font-template(16px, 24px, 400);
   }
 
   &__card {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 15px 0 var(--slr__connection-card-shadow-danger-clr);
-    border-radius: 40px;
-    padding: 19px 29px 19px 75px;
-    background: var(--slr__body-bg-clr) url("/assets/icons/shield-cross.svg") no-repeat left 28px center;
-    background-size: 27px 34px;
+    box-shadow: 0 17px 43px rgba(0, 147, 220, 0.11), 0 3.79717px 9.60461px rgba(0, 147, 220, 0.0655718);
+    border-radius: 10px;
+    padding: 80px 20px 19px;
+    background: var(--slr__body-bg-clr) url("/assets/icons/shield-cross.svg") no-repeat top 25px center;
+    background-size: 43px 43px;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  &__ip {
+    color: var(--slr__txt-clr);
+    @include font-template(12px, 18px, 400);
   }
 
   &--protected {
+    color: #0093DC;
     background-image: url("/assets/images/world-map-protected.svg");
 
     .connection-status__card {

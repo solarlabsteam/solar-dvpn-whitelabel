@@ -10,8 +10,8 @@
     position: relative;
     margin-right: 16px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
   }
 
   &__shield {
@@ -24,15 +24,16 @@
   }
 
   &__title {
-    @include font-template(16px, 19px, 500);
+    color: var(--slr__txt-clr);
+    @include font-template(14px, 21px, 600);
   }
 
   &__subtitle {
     display: flex;
     align-items: center;
     margin-top: 2px;
-    color: var(--slr__txt-clr);
-    @include font-template(12px, 14px);
+    text-transform: uppercase;
+    @include font-template(14px, 21px, 800);
   }
 
   &__action {

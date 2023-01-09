@@ -53,26 +53,31 @@ const paste = (e: ClipboardEvent) => {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+    padding: 1px;
   }
 
   &__field {
     display: flex;
     align-items: center;
+    outline: 1px solid #515151;
+    border-radius: 21px;
+    background-color: var(--slr__body-bg-clr);
   }
 
   &__field-pretend {
     padding: 11px;
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
+    outline: 1px solid #515151;
+    border-radius: 21px;
     background-color: var(--slr__border-clr);
-    width: 35px;
+    width: 53px;
     height: 100%;
     box-sizing: border-box;
   }
 
   &__field-input {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    border: none;
+    background-color: transparent;
+    border-radius: 21px;
     width: 100%;
   }
 }

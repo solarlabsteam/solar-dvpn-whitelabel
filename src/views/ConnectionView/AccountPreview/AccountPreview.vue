@@ -1,20 +1,13 @@
 <template>
   <div class="account-preview">
-    <div class="account-preview__icon slr-clickable" @click="openSettingsView">
-      <slr-icon :icon="'gear'" :size="19" />
+    <div class="account-preview__icon slr-clickable" @click="openAccountView">
+      <slr-icon :icon="'account'" :size="38" />
     </div>
     <div class="account-preview__info">
-      <div class="text-right">
-        <div class="account-preview__address">
-          {{ croppedAddress }}
-        </div>
-        <div class="account-preview__balance">
-          {{ balance }}
-        </div>
-      </div>
-      <div class="account-preview__icon slr-clickable" @click="openAccountView">
-        <slr-icon :icon="'account'" :size="19" />
-      </div>
+      BlueVPN
+    </div>
+    <div class="account-preview__icon slr-clickable" @click="openSettingsView">
+      <slr-icon :icon="'gear'" :size="38" />
     </div>
   </div>
 </template>

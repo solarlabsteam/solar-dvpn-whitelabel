@@ -1,21 +1,15 @@
 <template>
   <div class="setup-complete">
     <div class="setup-complete__info">
-      <slr-icon :icon="'check-circle'" :size="100" class="mb-5" />
+      <slr-icon :icon="'blue-wizard'" :width="360" :height="405" class="mb-5" />
 
-      <p class="setup-complete__title">
-        {{ t("setup.complete.title") }}
-      </p>
-
-      <p class="setup-complete__text">
-        {{ t("setup.complete.text") }}
-      </p>
+      <p class="setup-complete__title" v-html="t('setup.complete.title')"></p>
+      <p class="setup-complete__text" v-html="t('setup.complete.text')"></p>
     </div>
 
     <slr-button
       :block="true"
       :variant="'primary'"
-      :light="true"
       :large="true"
       @click="close"
     >
@@ -59,11 +53,11 @@ const close = () => {
   &__title {
     margin-bottom: 13px;
     color: var(--slr__title-txt-clr);
-    @include font-template(28px, 34px, 500);
+    @include font-template(26px, 39px, 700);
   }
 
   &__text {
-    @include font-template(16px, 22px);
+    @include font-template(18px, 27px, 400);
   }
 }
 </style>

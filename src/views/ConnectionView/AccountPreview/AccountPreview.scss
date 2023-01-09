@@ -7,10 +7,8 @@
   padding: 12px 16px;
 
   &__info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+    color: var(--slr__title-txt-clr);
+    @include font-template(20px, 30px, 600);
   }
 
   &__address {
@@ -28,11 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 34px;
-    height: 34px;
     box-sizing: border-box;
-    padding: 7px;
-    border-radius: 50%;
-    background-color: var(--slr__btn-bg-primary-light);
   }
 }

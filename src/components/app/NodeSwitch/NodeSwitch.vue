@@ -2,6 +2,7 @@
   <div class="node-switch">
     <node-preview v-if="node" :node="node" :show-price="false" />
     <slr-button
+      class="node-switch__btn"
       :variant="'primary'"
       :light="true"
       :block="!node"
@@ -30,5 +31,12 @@ const { openNodesView } = useAppRouter();
 <style lang="scss" scoped>
 .node-switch {
   display: flex;
+  border: 1px solid #E6E6E6;
+  border-radius: 32px;
+  padding: 9px;
+
+  &__btn {
+    text-transform: uppercase;
+  }
 }
 </style>

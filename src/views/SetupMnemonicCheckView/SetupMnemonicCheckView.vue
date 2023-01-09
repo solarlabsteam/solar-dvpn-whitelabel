@@ -5,7 +5,9 @@
         {{ t("action.back") }}
       </slr-button>
     </template>
-    <template #header-title>Your new mnemonic</template>
+    <template #header-title>
+      {{ t('account.getStarted')}}
+    </template>
     <template #content>
       <check-mnemonic :mnemonic="props.mnemonic" />
     </template>

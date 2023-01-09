@@ -1,12 +1,8 @@
 <template>
   <div class="setup-mnemonic">
     <div class="setup-mnemonic__info">
-      <p class="setup-mnemonic__title">
-        {{ t("setup.mnemonic.create.title") }}
-      </p>
-      <p class="setup-mnemonic__text mb-5">
-        {{ t("setup.mnemonic.create.text") }}
-      </p>
+      <p class="setup-mnemonic__title" v-html="t('setup.mnemonic.create.title')"></p>
+      <p class="setup-mnemonic__text mb-5" v-html="t('setup.mnemonic.create.text')"></p>
     </div>
 
     <div class="setup-mnemonic__buttons">
@@ -14,7 +10,6 @@
         class="mb-3"
         :block="true"
         :variant="'primary'"
-        :light="true"
         :large="true"
         :loading="isWalletLoading"
         :disabled="isWalletLoading"
@@ -29,7 +24,7 @@
 
       <slr-button
         :block="true"
-        :variant="'secondary'"
+        :variant="'outline'"
         :light="true"
         :large="true"
         :disabled="isWalletLoading"

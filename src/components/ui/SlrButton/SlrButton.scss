@@ -1,7 +1,7 @@
 .slr-button {
   position: relative;
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   margin: 0;
   padding: 4px 20px;
   font-size: 16px;
@@ -34,6 +34,7 @@
   &--large {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 18px;
 
     &.slr-button--rounded {
       border-radius: 36px;
@@ -64,9 +65,22 @@
     color: var(--slr__btn-text-secondary-light);
   }
 
+  &--outline {
+    border: 1px solid #C1C1C1;
+    color: var(--slr__btn-text-secondary);
+  }
+
+  &--light#{&}--outline {
+    background-color: var(--slr__btn-bg-outline-light);
+  }
+
   &--danger {
-    background-color: var(--slr__logout-btn-bg-clr);
+    background-color: white;
     text-transform: uppercase;
     color: var(--slr__logout-btn-txt-clr);
+  }
+
+  &--shadow {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 }

@@ -21,12 +21,9 @@ function draw(): void {
     element: qr.value,
     value: props.value,
     size: props.size,
-    background: getComputedStyle(document.documentElement).getPropertyValue(
-      "--slr__btn-bg-primary-light"
-    ),
-    foreground: getComputedStyle(document.documentElement).getPropertyValue(
-      "--slr__btn-text-primary-light"
-    ),
+    background: 'transparent',
+    foreground: 'black',
+    padding: 0
   });
 }
 
@@ -45,9 +42,5 @@ onMounted((): void => {
 <style lang="scss" scoped>
 .qr-code {
   display: inline-flex;
-
-  & canvas {
-    border-radius: 15px;
-  }
 }
 </style>

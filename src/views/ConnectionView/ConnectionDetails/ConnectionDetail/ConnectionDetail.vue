@@ -3,19 +3,17 @@
     class="connection-detail"
     :class="{ 'connection-detail--connected': isConnected }"
   >
-    <slr-icon
-      class="connection-detail__icon"
-      :icon="icon"
-      :width="18"
-      :height="22"
-    />
-
     <p class="connection-detail__value">
-      <span class="connection-detail__amount">{{ value }}</span>
-      <span class="connection-detail__units">{{ units }}</span>
+      {{ value }}&nbsp;{{ units }}
     </p>
 
     <p class="connection-detail__type">
+      <slr-icon
+          class="connection-detail__icon"
+          :icon="icon"
+          :width="18"
+          :height="18"
+      />
       {{ t(`connection.${type}`) }}
     </p>
   </div>
@@ -35,9 +33,7 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
-const icon = computed<string>(() =>
-  props.isConnected ? `${icons[props.type]}-success` : icons[props.type]
-);
+const icon = computed<string>(() => icons[props.type]);
 </script>
 
 <style lang="scss" src="./ConnectionDetail.scss" scoped />

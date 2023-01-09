@@ -64,6 +64,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    shadow: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   emits: ["click"],
@@ -79,8 +83,10 @@ export default {
       "slr-button--disabled": props.disabled || props.loading,
       "slr-button--primary": props.variant === "primary",
       "slr-button--secondary": props.variant === "secondary",
+      "slr-button--outline": props.variant === "outline",
       "slr-button--danger": props.variant === "danger",
       "slr-button--light": props.light,
+      "slr-button--shadow": props.shadow,
     }));
 
     const onClick = (e) => {

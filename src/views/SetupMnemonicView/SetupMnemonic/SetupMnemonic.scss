@@ -22,11 +22,11 @@
   &__title {
     margin-bottom: 13px;
     color: var(--slr__title-txt-clr);
-    @include font-template(28px, 34px, 500);
+    @include font-template(26px, 39px, 700);
   }
 
   &__text {
-    @include font-template(16px, 22px);
+    @include font-template(18px, 27px, 400);
   }
 
   &__buttons {

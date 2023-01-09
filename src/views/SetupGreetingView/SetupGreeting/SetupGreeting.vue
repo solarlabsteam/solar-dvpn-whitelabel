@@ -1,20 +1,17 @@
 <template>
   <div class="setup-greeting">
     <div class="setup-greeting__info">
-      <slr-icon :size="128" :icon="'logo'" />
+      <slr-icon :width="238" :height="232" :icon="'logo'" />
 
-      <p class="setup-greeting__title">
-        {{ t("setup.greeting.title") }}
-      </p>
-      <p class="setup-greeting__text">
-        {{ t("setup.greeting.text") }}
-      </p>
+      <p class="setup-greeting__title" v-html="t('setup.greeting.title')"></p>
+      <p class="setup-greeting__text" v-html="t('setup.greeting.text')"></p>
     </div>
     <slr-button
       :block="true"
       :variant="'secondary'"
       :light="true"
       :large="true"
+      :shadow="true"
       @click="openSetupActionsView"
     >
       {{ t("account.getStarted") }}
@@ -51,11 +48,11 @@ const { openSetupActionsView } = useAppRouter();
 
   &__title {
     color: var(--slr__title-txt-clr);
-    @include font-template(31px, 36px, 600);
+    @include font-template(60px, 90px, 700);
   }
 
   &__text {
-    @include font-template(16px, 22px);
+    @include font-template(18px, 27px, 400);
   }
 }
 </style>

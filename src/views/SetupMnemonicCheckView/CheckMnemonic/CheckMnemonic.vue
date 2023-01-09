@@ -2,21 +2,28 @@
   <div class="check-mnemonic">
     <div class="check-mnemonic__info">
       <slr-secure-blur class="check-mnemonic__blur">
-        <ol class="check-mnemonic__phrase">
-          <li v-for="word in words" :key="word" class="pl-2 my-1">
-            {{ word }}
-          </li>
-        </ol>
+        <table class="check-mnemonic__phrase1">
+          <tr v-for="r in 8" class="check-mnemonic__phrase-row">
+            <td v-for="c in 3"
+                class="check-mnemonic__phrase-cell"
+                :class="{
+                  'check-mnemonic__phrase-cell--left': c === 1,
+                  'check-mnemonic__phrase-cell--right': c === 3,
+                  'check-mnemonic__phrase-cell--top': r === 1,
+                  'check-mnemonic__phrase-cell--bottom': r === 8
+                }"
+            >
+              <span class="check-mnemonic__phrase-cell-value">
+                {{ (r - 1) * 3 + c }}.&nbsp;{{ words.slice((r - 1) * 3, 3 * r)[c - 1]}}
+              </span>
+            </td>
+          </tr>
+        </table>
       </slr-secure-blur>
 
       <div class="check-mnemonic__data">
-        <p class="check-mnemonic__title">
-          {{ t("setup.mnemonic.check.title") }}
-        </p>
-
-        <p class="check-mnemonic__text mb-5">
-          <span>{{ t("setup.mnemonic.check.text") }}</span>
-        </p>
+        <p class="check-mnemonic__title" v-html="t('setup.mnemonic.check.title')"></p>
+        <p class="check-mnemonic__text mb-5" v-html="t('setup.mnemonic.check.text')"></p>
       </div>
     </div>
 
@@ -34,7 +41,6 @@
           <slr-button
             :block="true"
             :variant="'primary'"
-            :light="true"
             :large="true"
             :loading="isWalletLoading"
             @click="confirm"

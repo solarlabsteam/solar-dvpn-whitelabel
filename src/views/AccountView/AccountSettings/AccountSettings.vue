@@ -95,7 +95,6 @@ const croppedAddress = computed<string | undefined>(
   justify-content: space-between;
   width: 100%;
   padding: 25px 16px 16px;
-  border-top: 1px solid var(--slr__border-clr);
   overflow-x: auto;
 
   &__body-wallet {

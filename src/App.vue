@@ -175,6 +175,9 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--slr__body-bg-clr);
+  background-image: url("/assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Poppins", sans-serif;
   color: var(--slr__txt-clr);
   user-select: none;
