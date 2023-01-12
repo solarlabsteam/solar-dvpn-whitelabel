@@ -3,9 +3,9 @@
   border: none;
   border-radius: 50px;
   margin: 0;
-  padding: 4px 20px;
-  font-size: 16px;
+  padding: 15px 40px;
   font-family: 'Poppins', sans-serif;
+  @include font-template(14px, 21px, 500);
 
   &--block {
     display: flex;
@@ -14,73 +14,69 @@
     width: 100%;
   }
 
-  &--text {
-    background-color: transparent;
-    color: var(--slr__link-txt-clr);
-
-    &::before {
-      background-color: transparent;
-    }
-  }
-
   &--tiny {
-    padding: 2px 4px;
-  }
-
-  &--rounded {
-    border-radius: 20px;
+    padding: 8px 40px;
+    @include font-template(12px, 18px, 500);
   }
 
   &--large {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 18px;
-
-    &.slr-button--rounded {
-      border-radius: 36px;
-    }
+    padding: 17px 40px;
+    @include font-template(20px, 30px, 500);
   }
 
   &--disabled {
     cursor: default;
   }
 
-  &--primary {
-    background-color: var(--slr__btn-bg-primary);
-    color: var(--slr__btn-text-primary);
+  &--shadow {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  &--light#{&}--primary {
-    background-color: var(--slr__btn-bg-primary-light);
-    color: var(--slr__btn-text-primary-light);
+  // Variants styles
+
+  &--primary {
+    background-color: var(--slr__btn-primary-bg);
+    color: var(--slr__btn-primary-clr);
   }
 
   &--secondary {
-    background-color: var(--slr__btn-bg-secondary);
-    color: var(--slr__btn-text-secondary);
+    background-color: var(--slr__btn-secondary-bg);
+    color: var(--slr__btn-secondary-clr);
   }
 
-  &--light#{&}--secondary {
-    background-color: var(--slr__btn-bg-secondary-light);
-    color: var(--slr__btn-text-secondary-light);
+  &--secondary#{&}--disabled {
+    background-color: var(--slr__btn-secondary-disabled-bg);
+    color: var(--slr__btn-secondary-disabled-clr);
   }
 
-  &--outline {
-    border: 1px solid #C1C1C1;
-    color: var(--slr__btn-text-secondary);
-  }
-
-  &--light#{&}--outline {
-    background-color: var(--slr__btn-bg-outline-light);
+  &--secondary#{&}--outline {
+    background-color: var(--slr__btn-secondary-outline-bg);
+    color: var(--slr__btn-secondary-outline-clr);
+    border: 1px solid var(--slr__btn-secondary-outline-border-clr);
   }
 
   &--danger {
-    background-color: white;
-    text-transform: uppercase;
-    color: var(--slr__logout-btn-txt-clr);
+    background-color: var(--slr__btn-danger-bg);
+    color: var(--slr__btn-danger-clr);
   }
 
-  &--shadow {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  &--info {
+    background-color: var(--slr__btn-info-bg);
+    color: var(--slr__btn-info-clr);
+  }
+
+  &--light {
+    background-color: var(--slr__btn-light-bg);
+    color: var(--slr__btn-light-clr);
+  }
+
+  &--text {
+    padding: unset;
+    background-color: var(--slr__btn-text-bg);
+    color: var(--slr__btn-text-clr);
+  }
+
+  &--text#{&}--disabled {
+    color: var(--slr__btn-text-disabled-clr);
   }
 }

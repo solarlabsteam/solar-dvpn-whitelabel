@@ -26,10 +26,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    text: {
-      type: Boolean,
-      default: false,
-    },
     tiny: {
       type: Boolean,
       default: false,
@@ -37,10 +33,6 @@ export default {
     icon: {
       type: String,
       default: "",
-    },
-    rounded: {
-      type: Boolean,
-      default: false,
     },
     large: {
       type: Boolean,
@@ -54,19 +46,19 @@ export default {
       type: Boolean,
       default: false,
     },
+    shadow: {
+      type: Boolean,
+      default: false,
+    },
+    outline: {
+      type: Boolean,
+      default: false,
+    },
     variant: {
       type: String,
       default: "",
       validator: (variant) =>
-        variant ? ["primary", "secondary", "danger"].includes(variant) : true,
-    },
-    light: {
-      type: Boolean,
-      default: false,
-    },
-    shadow: {
-      type: Boolean,
-      default: false,
+        variant ? ["primary", "secondary", "danger", "info", "light", "text"].includes(variant) : true,
     },
   },
 
@@ -75,18 +67,21 @@ export default {
   setup(props, { emit }) {
     const router = useRouter();
     const classes = computed(() => ({
+      // Properties
       "slr-button--block": props.block,
-      "slr-button--text": props.text,
       "slr-button--tiny": props.tiny,
-      "slr-button--rounded": props.rounded,
       "slr-button--large": props.large,
       "slr-button--disabled": props.disabled || props.loading,
+      "slr-button--shadow": props.shadow,
+      "slr-button--outline": props.outline,
+
+      // Variants
       "slr-button--primary": props.variant === "primary",
       "slr-button--secondary": props.variant === "secondary",
-      "slr-button--outline": props.variant === "outline",
       "slr-button--danger": props.variant === "danger",
-      "slr-button--light": props.light,
-      "slr-button--shadow": props.shadow,
+      "slr-button--info": props.variant === "info",
+      "slr-button--light": props.variant === "light",
+      "slr-button--text": props.variant === "text",
     }));
 
     const onClick = (e) => {

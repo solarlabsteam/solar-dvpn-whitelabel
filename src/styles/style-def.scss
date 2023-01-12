@@ -2,7 +2,7 @@
   --slr__body-bg-clr: #{$slr__clr-white};
   --slr__bg-outline-clr: #e7f6f9;
 
-  --slr__border-clr: rgb(242, 242, 242);
+  --slr__border-clr: #515151;
 
   --slr__txt-clr: #{rgb(141, 141, 146)};
   --slr__txt-secondary-clr: #{rgb(238, 238, 238)};
@@ -31,19 +31,36 @@
   --slr__search-input-clr: rgba(0, 0, 0, 0.25);
 
   --slr__tabs-clr: rgba(0, 0, 0, 0.85);
-  --slr--tab-bg-active: #0a84ff;
+  --slr--tab-bg-active: #E5F4FC;
+  --slr--tab-txt-clr: #0093DC;
 
-  --slr__btn-bg-primary: #0a84ff;
-  --slr__btn-text-primary: #{$slr__clr-white};
+  // Buttons
 
-  --slr__btn-bg-primary-light: #e7f6f9;
-  --slr__btn-text-primary-light: #0a84ff;
+  --slr__btn-primary-bg: #0093DC;
+  --slr__btn-primary-clr: #fff;
 
-  --slr__btn-bg-secondary: rgb(229, 229, 234);
-  --slr__btn-text-secondary: rgb(141, 141, 146);
+  --slr__btn-secondary-bg: #E5E5EA;
+  --slr__btn-secondary-clr: #1A1A1A;
+  --slr__btn-secondary-disabled-bg: #F9F9F9;
+  --slr__btn-secondary-disabled-clr: #868686;
+  --slr__btn-secondary-outline-bg: transparent;
+  --slr__btn-secondary-outline-clr: #868686;
+  --slr__btn-secondary-outline-border-clr: #C1C1C1;
 
-  --slr__btn-bg-secondary-light: rgb(249, 249, 249);
-  --slr__btn-text-secondary-light: rgb(141, 141, 146);
+  --slr__btn-danger-bg: #fff;
+  --slr__btn-danger-clr: #FF3B30;
+
+  --slr__btn-info-bg: #E5F4FC;
+  --slr__btn-info-clr: #0093DC;
+
+  --slr__btn-light-bg: #fff;
+  --slr__btn-light-clr: #0093DC;
+
+  --slr__btn-text-bg: transparent;
+  --slr__btn-text-clr: #0093DC;
+  --slr__btn-text-disabled-clr: #1A1A1A;
+
+  // end Buttons
 
   --slr__input-bg-clr: rgb(249, 249, 249);
   --slr__input-txt: #{$slr__clr-black};
