@@ -4,18 +4,16 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: var(--slr__txt-secondary-clr);
+  color: var(--slr__title-txt-clr);
 
   &__title {
     margin-top: 27px;
     margin-bottom: 9px;
-    font-size: 28px;
-    line-height: 34px;
-    font-weight: 600;
+    @include font-template(30px, 45px, 700);
   }
 
   &__text {
-    font-size: 16px;
     text-align: center;
+    @include font-template(16px, 24px);
   }
 }

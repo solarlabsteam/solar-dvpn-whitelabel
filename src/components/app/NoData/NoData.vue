@@ -5,8 +5,7 @@
     <slr-button
       v-if="actionText && action"
       class="mt-5"
-      :variant="'primary'"
-      :light="true"
+      :variant="'light'"
       :large="true"
       @click="action"
     >
