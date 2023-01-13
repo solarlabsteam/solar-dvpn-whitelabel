@@ -7,6 +7,10 @@
     @include font-template(11px, 13px, 600)
 }
 
+.r-s10-lh15 {
+    @include font-template(10px, 15px);
+}
+
 .r-s11-lh13 {
     @include font-template(11px, 13px)
 }
@@ -21,6 +25,10 @@
 
 .r-s13-lh16 {
     @include font-template(13px, 16px);
+}
+
+.r-s14-lh19 {
+    @include font-template(14px, 19px);
 }
 
 .r-s17-lh20 {
@@ -45,6 +53,10 @@
 
 .m-s20-lh24 {
     @include font-template(20px, 24px, 500);
+}
+
+.s-s16-lh24 {
+    @include font-template(16px, 24px, 600);
 }
 
 .s-s32-lh35 {

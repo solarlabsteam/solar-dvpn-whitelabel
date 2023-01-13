@@ -4,6 +4,7 @@ import { computed, type ComputedRef } from "vue";
 
 export default function useWallet(): {
   wallet: ComputedRef<Wallet | undefined>;
+  walletUpdateTime: ComputedRef<number | undefined>;
   isWalletLoading: ComputedRef<boolean>;
   create(): Promise<string>;
   get(): Promise<void>;
@@ -13,6 +14,7 @@ export default function useWallet(): {
   const store = useStore();
 
   const wallet = computed<Wallet | undefined>(() => store.getters.wallet);
+  const walletUpdateTime = computed<number | undefined>(() => store.getters.walletUpdateTime);
   const isWalletLoading = computed<boolean>(
     () => store.getters.isWalletLoading
   );
@@ -35,6 +37,7 @@ export default function useWallet(): {
 
   return {
     wallet,
+    walletUpdateTime,
     isWalletLoading,
     create,
     get,

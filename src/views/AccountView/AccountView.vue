@@ -3,8 +3,8 @@
     <template #header-nav>
       <slr-icon
         class="slr-clickable"
-        :icon="'cross-active'"
-        :size="20"
+        :icon="'close'"
+        :size="38"
         @click.prevent.stop="() => close()"
       />
     </template>

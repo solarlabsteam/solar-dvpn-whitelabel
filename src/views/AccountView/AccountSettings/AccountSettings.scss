@@ -1,0 +1,35 @@
+.account-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px 16px;
+  overflow-x: auto;
+
+  &__address {
+    padding: 30px 19px;
+    border: 1px solid var(--slr__border-clr);
+    border-radius: 18px;
+  }
+
+  &__body-wallet {
+    width: 100%;
+  }
+
+  &__balance {
+    padding: 30px 19px;
+    color: var(--slr__account-balance-clr);
+    border: 1px solid var(--slr__border-clr);
+    border-radius: 18px;
+  }
+
+  &__balance-denom {
+    color: var(--slr__account-balance-value-clr);
+    @include font-template(12px, 19px);
+  }
+
+  &__balance-amount {
+    color: var(--slr__account-balance-value-clr);
+    @include font-template(62px, 65px, 800);
+  }
+}
