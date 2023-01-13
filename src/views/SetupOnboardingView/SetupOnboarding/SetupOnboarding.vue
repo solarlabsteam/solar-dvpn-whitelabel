@@ -7,6 +7,13 @@
     <div class="setup-onboarding__content">
       <div class="setup-onboarding__title" v-html="t(`setup.onboarding.${onboardingViews[currentOnboardingView].name}.title`)"></div>
       <div class="setup-onboarding__text" v-html="t(`setup.onboarding.${onboardingViews[currentOnboardingView].name}.text`)"></div>
+      <div class="setup-onboarding__carousel">
+        <div
+          v-for="i in onboardingViews.length"
+          class="setup-onboarding__carousel-item"
+          :class="{ 'setup-onboarding__carousel-item--active': currentOnboardingView === i - 1 }">
+        </div>
+      </div>
     </div>
     <div class="setup-onboarding__buttons">
       <slr-button

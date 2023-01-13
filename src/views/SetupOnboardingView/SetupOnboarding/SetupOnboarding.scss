@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    align-items: center;
     height: 100%;
     bottom: 10%;
   }
@@ -26,8 +27,9 @@
   }
 
   &__text {
+    margin-bottom: 25px;
     color: var(--slr__setup-onboarding-txt-clr);
-    @include font-template(12px, 18px);
+    @include font-template(14px, 18px);
   }
 
   &__buttons {
@@ -41,23 +43,40 @@
     color: var(--slr__btn-secondary-outline-clr);
   }
 
+  &__carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  &__carousel-item {
+    border-radius: 4px;
+    width: 8px;
+    height: 8px;
+    background: var(--slr__setup-onboarding-carousel-bg);
+
+    &--active {
+      background: var(--slr__setup-onboarding-carousel-bg-active);
+    }
+  }
+
   @media (max-width: 375px) {
     &__title {
       @include font-template(22px, 30px, 600);
     }
 
     &__text {
-      @include font-template(11px, 14px);
+      @include font-template(13px, 16px);
     }
   }
 
   @media (max-width: 360px) {
     &__title {
-      @include font-template(20px, 30px, 600);
+      @include font-template(19px, 26px, 600);
     }
 
     &__text {
-      @include font-template(10px, 14px);
+      @include font-template(12px, 14px);
     }
 
     &__content {
