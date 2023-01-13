@@ -21,6 +21,10 @@ class ConnectionService {
   async queryResetConfiguration(): Promise<void> {
     await connectionApi.resetConfiguration();
   }
+
+  async queryCurrentIp(): Promise<string> {
+    return await connectionApi.getCurrentIp();
+  }
 }
 
 const connectionService = new ConnectionService();

@@ -4,6 +4,7 @@ import connectionService from "@/services/ConnectionService";
 import nodeService from "@/services/NodeService";
 
 interface ConnectionState {
+  currentIp?: string;
   isConnectionLoading: boolean;
   isConnected: boolean;
   isStopSessionsInProgress: boolean;
@@ -21,6 +22,7 @@ export default {
   state: getDefaultState(),
 
   getters: {
+    currentIp: (state: ConnectionState): string | undefined => state.currentIp,
     isConnectionLoading: (state: ConnectionState): boolean =>
       state.isConnectionLoading,
     isConnected: (state: ConnectionState): boolean => state.isConnected,
@@ -31,6 +33,11 @@ export default {
   },
 
   actions: {
+    async getCurrentIp({ commit }): Promise<void> {
+      const ip = await connectionService.queryCurrentIp();
+      commit(ConnectionMutationTypes.SET_CURRENT_IP, ip);
+    },
+
     async connectToNode({ commit, getters }): Promise<void> {
       commit(ConnectionMutationTypes.SET_CONNECTION_LOADING_STATE, true);
 
@@ -125,6 +132,13 @@ export default {
       value: boolean
     ): void {
       state.isResetConfigurationInProgress = value;
+    },
+
+    [ConnectionMutationTypes.SET_CURRENT_IP](
+      state,
+      value: string
+    ): void {
+      state.currentIp = value;
     },
   },
 } as Module<ConnectionState, any>;

@@ -1,5 +1,6 @@
 import { apiProvider } from "@/api";
 import type { NodeConnection } from "@/types";
+import axios from "axios";
 
 class ConnectionApi {
   private readonly apiPath = "connection";
@@ -22,6 +23,11 @@ class ConnectionApi {
 
   async resetConfiguration(): Promise<void> {
     await apiProvider.delete(`${this.apiPath}/configuration`);
+  }
+
+  async getCurrentIp(): Promise<string> {
+    const response = await axios.get('https://api.ipify.org?format=json');
+    return response.data.ip;
   }
 }
 

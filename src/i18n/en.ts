@@ -77,6 +77,7 @@ export default {
     upload: "Upload",
     download: "Download",
     bandwidth: "Bandwidth left",
+    yourIp: "Your ip: {ip}"
   },
 
   node: {

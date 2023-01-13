@@ -5,10 +5,12 @@ import useAppDialogs from "@/hooks/useAppDialogs";
 import useAppRouter from "@/hooks/useAppRouter";
 
 export default function useConnection(): {
+  currentIp: ComputedRef<string | undefined>;
   isConnected: ComputedRef<boolean>;
   isConnectionLoading: ComputedRef<boolean>;
   isStopSessionsInProgress: ComputedRef<boolean>;
   isResetConfigurationInProgress: ComputedRef<boolean>;
+  loadCurrentIp(): Promise<void>;
   select(node: Node): Promise<void>;
   connect(node: Node): Promise<void>;
   disconnect(): Promise<void>;
@@ -21,6 +23,7 @@ export default function useConnection(): {
   const { openConnectionView } = useAppRouter();
   const { openSubscriptionModal, openUnsubscriptionModal } = useAppDialogs();
 
+  const currentIp = computed<string | undefined>(() => store.getters.currentIp);
   const isConnectionLoading = computed<boolean>(
     () => store.getters.isConnectionLoading
   );
@@ -89,11 +92,17 @@ export default function useConnection(): {
     await store.dispatch("checkNodeConnection");
   };
 
+  const loadCurrentIp = async (): Promise<void> => {
+    await store.dispatch("getCurrentIp");
+  };
+
   return {
+    currentIp,
     isConnectionLoading,
     isConnected,
     isStopSessionsInProgress,
     isResetConfigurationInProgress,
+    loadCurrentIp,
     select,
     connect,
     disconnect,

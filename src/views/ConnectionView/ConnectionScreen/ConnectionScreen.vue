@@ -5,6 +5,7 @@
     <div class="connection-screen__content-wrapper">
       <connection-status
         class="connection-screen__status"
+        :current-ip="currentIp"
         :is-connected="isConnected"
       />
       <connection-details
@@ -20,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import ConnectionDetails from "../ConnectionDetails";
 import { formatBandwidth } from "@/utils/formatters";
 import type { Bandwidth } from "@/types";
@@ -30,7 +31,7 @@ import ConnectionControls from "@/views/ConnectionView/ConnectionControls/Connec
 import useNodes from "@/hooks/useNodes";
 import useConnection from "@/hooks/useConnection";
 
-const { isConnected } = useConnection();
+const { currentIp, isConnected, loadCurrentIp } = useConnection();
 const { selectedNode: node, selectedNodeQuota: quota } = useNodes();
 
 const bandwidthDownload = computed<Bandwidth>(() =>
@@ -45,6 +46,8 @@ const bandwidthLeft = computed<string>(() =>
     1e9
   ).toFixed(2)
 );
+
+watch(isConnected, loadCurrentIp, { immediate: true });
 </script>
 
 <style lang="scss" src="./ConnectionScreen.scss" scoped />
