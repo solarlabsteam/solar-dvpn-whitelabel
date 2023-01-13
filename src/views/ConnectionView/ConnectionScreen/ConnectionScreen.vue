@@ -18,6 +18,13 @@
       <connection-controls />
     </div>
   </div>
+  <div v-if="route.path.startsWith('/nodes')" class="connection-screen__nodes-mask">
+    <div class="connection-screen__nodes-wrapper">
+      <div class="connection-screen__nodes">
+        <router-view />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -30,9 +37,11 @@ import ConnectionStatus from "@/views/ConnectionView/ConnectionStatus/Connection
 import ConnectionControls from "@/views/ConnectionView/ConnectionControls/ConnectionControls.vue";
 import useNodes from "@/hooks/useNodes";
 import useConnection from "@/hooks/useConnection";
+import { useRoute } from "vue-router";
 
 const { currentIp, isConnected, loadCurrentIp } = useConnection();
 const { selectedNode: node, selectedNodeQuota: quota } = useNodes();
+const route = useRoute()
 
 const bandwidthDownload = computed<Bandwidth>(() =>
   formatBandwidth(node.value?.bandwidthDownload || 0)

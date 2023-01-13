@@ -23,38 +23,41 @@ const routes: RouteRecordRaw[] = [
     path: "/",
     component: ConnectionView,
     name: "home",
-  },
-  {
-    path: "/nodes",
-    component: RouterView,
-    redirect: { name: "nodes" },
     children: [
       {
-        path: "",
-        component: NodesView,
-        name: "nodes",
-        props: (route) => {
-          return { ...route.query };
-        },
+        path: "/nodes",
+        component: RouterView,
+        redirect: { name: "nodes" },
+        children: [
+          {
+            path: "",
+            component: NodesView,
+            name: "nodes",
+            props: (route) => {
+              return { ...route.query };
+            },
+          },
+          {
+            path: "available",
+            component: NodesAvailableView,
+            name: "nodes-available",
+            props: (route) => {
+              return { ...route.query };
+            },
+          },
+          {
+            path: "search",
+            component: NodesSearchView,
+            name: "nodes-search",
+            props: (route) => {
+              return { ...route.query };
+            },
+          },
+        ],
       },
-      {
-        path: "available",
-        component: NodesAvailableView,
-        name: "nodes-available",
-        props: (route) => {
-          return { ...route.query };
-        },
-      },
-      {
-        path: "search",
-        component: NodesSearchView,
-        name: "nodes-search",
-        props: (route) => {
-          return { ...route.query };
-        },
-      },
-    ],
+    ]
   },
+
   {
     path: "/setup",
     component: RouterView,

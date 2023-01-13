@@ -48,4 +48,33 @@
   &__quota-wrapper {
     margin-bottom: 50px;
   }
+
+  &__nodes-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+
+  &__nodes-wrapper {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 90%;
+    background-color: var(--slr__body-bg-clr);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  &__nodes {
+    background-image: url("/assets/images/background.svg");
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 100%;
+
+    &:before {
+      background-color: white;
+    }
+  }
 }
