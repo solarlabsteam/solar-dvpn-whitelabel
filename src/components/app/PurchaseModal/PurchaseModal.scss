@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     color: var(--slr__title-txt-clr);
-    @include font-template(25px, 25px, 400);
+    @include font-template(25px, 25px);
   }
 
   &__product-price {
