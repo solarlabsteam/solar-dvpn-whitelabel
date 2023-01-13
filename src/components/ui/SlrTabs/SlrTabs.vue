@@ -5,11 +5,7 @@
         v-for="(tab, i) in state.tabs"
         :key="tab.props?.title"
         class="slr-tabs__nav-item slr-clickable"
-        :class="{
-          'slr-tabs__nav-item--active': state.selectedIndex === i,
-          'slr-tabs__nav-item--left': i === 0,
-          'slr-tabs__nav-item--right': i === state.tabs.length - 1,
-        }"
+        :class="{ 'slr-tabs__nav-item--active': state.selectedIndex === i }"
         @click="changeTab(i)"
       >
         {{ tab.props?.title }}

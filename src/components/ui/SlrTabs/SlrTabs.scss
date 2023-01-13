@@ -1,37 +1,29 @@
 .slr-tabs {
   height: 100%;
-  
+
   &__nav {
     display: flex;
-    margin-bottom: 15px;
-    height: 27px;
+    margin-bottom: 24px;
+    height: 64px;
     outline: solid 1px var(--slr__border-clr);
-    border-radius: 6px;
+    border-radius: 32px;
+    background-color: var(--slr__body-bg-clr);
   }
 
   &__nav-item {
     flex: 1;
-    padding: 5px 0;
-    background-color: var(--slr__body-bg-clr);
-    font-size: 13px;
-    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
     text-align: center;
     color: var(--slr__tabs-clr);
     @include font-template(13px, 17px);
 
     &--active {
+      color: var(--slr--tab-txt-clr);
       background-color: var(--slr--tab-bg-active);
-      color: var(--slr__btn-text-primary);
-    }
-
-    &--left {
-      border-top-left-radius: 6px;
-      border-bottom-left-radius: 6px;
-    }
-
-    &--right {
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
+      border-radius: 32px;
     }
   }
 
