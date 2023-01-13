@@ -1,0 +1,40 @@
+.settings {
+  padding: 0 16px 16px;
+  width: 100%;
+  overflow-x: auto;
+
+  &__section {
+    padding: 25px 16px 16px;
+    border-bottom: 1px solid var(--slr__border-clr);
+    border-right: 1px solid var(--slr__border-clr);
+    border-left: 1px solid var(--slr__border-clr);
+
+    &:first-child {
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      border-top: 1px solid var(--slr__border-clr);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+  }
+
+  &__section-content {
+    @include font-template(16px, 24px);
+  }
+
+  &__dns-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--slr__border-clr);
+    border-radius: 50px;
+    padding: 9px;
+  }
+
+  &__dns-preview-btn {
+    border: 1px solid var(--slr__border-clr);
+  }
+}

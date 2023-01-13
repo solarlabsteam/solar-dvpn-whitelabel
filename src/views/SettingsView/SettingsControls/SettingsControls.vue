@@ -5,8 +5,8 @@
         <div class="settings__dns-preview">
           <dns-info-preview :info="selectedDns" />
           <slr-button
-            :variant="'primary'"
-            :light="true"
+            class="settings__dns-preview-btn"
+            :variant="'info'"
             @click="openDnsSettings"
           >
             {{ t("action.switch") }}
@@ -16,7 +16,9 @@
     </settings-section>
     <settings-section :title="t('settings.stopSessions.title')" class="settings__section">
       <template #content>
-        {{ t("settings.stopSessions.text") }}
+        <span class="settings__section-content">
+          {{ t("settings.stopSessions.text") }}
+        </span>
       </template>
       <template #buttons>
         <slr-button
@@ -32,8 +34,10 @@
       </template>
     </settings-section>
     <settings-section :title="t('settings.removeConfigurations.title')" class="settings__section">
-      <template #content>
-        {{ t("settings.removeConfigurations.text") }}
+      <template class="settings__section-content" #content>
+        <span class="settings__section-content">
+          {{ t("settings.removeConfigurations.text") }}
+        </span>
       </template>
       <template #buttons>
         <slr-button
@@ -74,37 +78,4 @@ const openDnsSettings = () => {
 };
 </script>
 
-<style lang="scss" scoped>
-.settings {
-  margin: 25px 16px 16px;
-  width: 100%;
-  overflow-x: auto;
-
-  &__section {
-    padding: 25px 16px 16px;
-    border-bottom: 1px solid #515151;
-    border-right: 1px solid #515151;
-    border-left: 1px solid #515151;
-  }
-
-  &__section:first-child {
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-    border-top: 1px solid #515151;
-  }
-
-  &__section:last-child {
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-  }
-
-  &__dns-preview {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #515151;
-    border-radius: 50px;
-    padding: 9px;
-  }
-}
-</style>
+<style lang="scss" src="./SettingsControls.scss" scoped />

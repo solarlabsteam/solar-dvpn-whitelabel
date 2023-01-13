@@ -25,6 +25,5 @@ const {
 .settings-dns {
   padding: 0 16px 16px;
   width: 100%;
-  border-top: 1px solid var(--slr__border-clr);
 }
 </style>

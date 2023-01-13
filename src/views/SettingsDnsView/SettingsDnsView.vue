@@ -1,9 +1,12 @@
 <template>
   <slr-view>
     <template #header-nav>
-      <slr-button class="r-s17-lh20" :tiny="true" :text="true" @click="back">
-        {{ t("action.back") }}
-      </slr-button>
+      <slr-icon
+        class="slr-clickable"
+        :icon="'back'"
+        :size="38"
+        @click.prevent.stop="back"
+      />
     </template>
     <template #header-title>
       {{ t("settings.dns") }}
