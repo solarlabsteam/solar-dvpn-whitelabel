@@ -1,14 +1,11 @@
 export default {
   account: {
     getStarted: "Get started",
-    wallet: "Your wallet",
+    wallet: "Your Wallet",
     address: "Sentinel Address",
     or: "Or",
-    logout: {
-      title: "Danger zone",
-      text: "Be careful, destructive stuff!",
-    },
-    balance: "Your balance",
+    balance: "Your Balance",
+    balanceUpdate: "Updated {time} ago",
     buyTokens: "Buy DVPN tokens",
   },
 
@@ -50,6 +47,11 @@ export default {
       text: "This will stop all active VPN sessions under your account and will turn your protection off. Use this for troubleshooting only.",
       button: "Stop sessions",
     },
+    removeConfigurations: {
+      title: "Remove VPN configurations",
+      text: "This will remove all the VPN configuration changes done by BlueVPN and will turn your protection off. Use this for troubleshooting only.",
+      button: "Reset VPN configuration",
+    },
   },
 
   connection: {
@@ -66,7 +68,7 @@ export default {
   node: {
     dvpn: "DVPN",
     list: {
-      title: "DVPN Nodes",
+      title: "DVPN",
       noData: {
         title: "Nothing found",
         text: "We found no nodes matching your search criteria.",
@@ -74,7 +76,7 @@ export default {
       noSubscriptions: {
         title: "No subscriptions",
         text: "You don’t have any DVPN node subscription yet.",
-        action: "Select a DVPN node",
+        action: "Select a Node",
       },
       search: {
         placeholder: "Search",
