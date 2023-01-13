@@ -62,12 +62,13 @@
 
   // end Buttons
 
-  --slr__input-bg-clr: rgb(249, 249, 249);
-  --slr__input-txt: #{$slr__clr-black};
-  --slr__input-focused-bd-clr: $slr__clr-blue-4;
+  // Input
 
-  --slr__logout-btn-txt-clr: rgb(255, 59, 48);
-  --slr__logout-btn-bg-clr: rgb(249, 249, 249);
+  --slr__input-bg-clr: rgb(249, 249, 249);
+  --slr__input-focused-bd-clr: $slr__clr-blue-4;
+  --slr__input-placeholder-clr: #777;
+
+  // end Input
 
   --slr__controls-bg-clr: rgb(248, 248, 248);
   --slr__controls-btn-bg-hover-clr: rgb(238, 238, 238);

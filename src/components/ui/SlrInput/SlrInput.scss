@@ -19,10 +19,11 @@
     width: 100%;
     height: 100%;
     background: transparent;
-    font-size: 14px;
+    @include font-template(14px, 18px);
 
     &::placeholder {
-      color: rgb(216, 216, 216)
+      color: var(--slr__input-placeholder-clr);
+      @include font-template(10px, 15px);
     }
   }
 }

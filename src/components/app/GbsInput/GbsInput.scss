@@ -10,7 +10,7 @@
   &__controls-amount {
     margin: 0 30px;
     color: var(--slr__title-txt-clr);
-    @include font-template(25px, 30px, 400)
+    @include font-template(25px, 30px)
   }
 
   &__control.slr-button {
