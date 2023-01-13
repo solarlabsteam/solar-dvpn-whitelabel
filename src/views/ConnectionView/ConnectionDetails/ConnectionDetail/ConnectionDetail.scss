@@ -12,7 +12,7 @@
     margin-bottom: 5px;
     color: var(--slr__title-txt-clr);
 
-    @include font-template(16px, 24px, 400);
+    @include font-template(16px, 24px);
   }
 
   &__type {
