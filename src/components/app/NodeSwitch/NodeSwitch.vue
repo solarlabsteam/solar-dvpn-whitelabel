@@ -1,10 +1,9 @@
 <template>
   <div class="node-switch">
-    <node-preview v-if="node" :node="node" :show-price="false" />
+    <node-details v-if="node" :node="node" />
     <slr-button
       class="node-switch__btn"
-      :variant="'primary'"
-      :light="true"
+      :variant="'info'"
       :block="!node"
       @click="openNodesView"
     >
@@ -14,11 +13,11 @@
 </template>
 
 <script setup lang="ts">
-import NodePreview from "@/components/app/NodePreview";
 import type { Node } from "@/types";
 import SlrButton from "@/components/ui/SlrButton/SlrButton.vue";
 import { useI18n } from "vue-i18n";
 import useAppRouter from "@/hooks/useAppRouter";
+import NodeDetails from "@/components/app/NodeDetails";
 
 defineProps<{
   node?: Node;
@@ -37,6 +36,7 @@ const { openNodesView } = useAppRouter();
 
   &__btn {
     text-transform: uppercase;
+    @include font-template(14px, 21px, 600);
   }
 }
 </style>

@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="country-preview__arrow">
-      <slr-icon :icon="'chevron-right'" :width="9" :height="14" />
+      <slr-icon :icon="'chevron-right'" :width="11" :height="19" />
     </div>
   </div>
 </template>

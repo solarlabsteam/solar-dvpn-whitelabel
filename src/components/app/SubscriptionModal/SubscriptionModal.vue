@@ -13,7 +13,7 @@
 
     <template #body>
       <div class="subscription-modal__body">
-        <node-preview v-if="!!node" :node="node" :show-price="false" />
+        <node-details v-if="!!node" :node="node" />
         <gbs-input
           :price="node?.defaultPrice"
           class="subscription-modal__input"
@@ -60,10 +60,10 @@ import { useI18n } from "vue-i18n";
 import useGlobalEmitter from "@/hooks/useGlobalEmitter";
 import GbsInput from "@/components/app/GbsInput";
 import type { Node } from "@/types";
-import NodePreview from "@/components/app/NodePreview/NodePreview.vue";
-import SlrButton from "@/components/ui/SlrButton/SlrButton.vue";
+import SlrButton from "@/components/ui/SlrButton";
 import useSubscription from "@/hooks/useSubscription";
 import useAppRouter from "@/hooks/useAppRouter";
+import NodeDetails from "@/components/app/NodeDetails";
 
 const { t } = useI18n();
 const emitter = useGlobalEmitter();
