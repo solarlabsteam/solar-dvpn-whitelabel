@@ -9,11 +9,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--slr__border-clr);
-    padding: 16px 0;
+    margin-bottom: 14px;
+    border: 1px solid var(--slr__list-item-border-clr);
+    border-radius: 8px;
+    height: 72px;
+    padding: 0 14px;
+    background-color: var(--slr__list-item-bg);
 
     &:last-child {
-      border-bottom: none;
+      margin-bottom: 0;
     }
   }
 }
