@@ -4,7 +4,7 @@
       <settings-section class="account-settings__address mb-5">
         <template #content>
           <div class="d-flex align-items-center">
-            <qr-code v-if="address" class="mr-4" :value="address" :size="91" />
+            <qr-code v-if="address" class="mr-4" :value="address" :size="90" />
             <div class="account-settings__body-wallet">
               <div class="d-flex w-100">
                 <div class="w-100">
@@ -78,7 +78,7 @@ const address = computed<string | undefined>(() => wallet.value?.address);
 const croppedAddress = computed<string | undefined>(
   () =>
     address.value &&
-    `${address.value.slice(0, 9)}...${address.value.slice(-10)}`
+    `${address.value.slice(0, 9)}...${address.value.slice(-8)}`
 );
 </script>
 

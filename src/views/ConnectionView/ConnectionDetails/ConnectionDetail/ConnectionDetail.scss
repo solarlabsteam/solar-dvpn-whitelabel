@@ -35,4 +35,20 @@
       color: var(--slr__connection-text-secondary-success-clr);
     }
   }
+
+  @media (max-width: 375px) {
+    padding: 8px 12px;
+  }
+
+  @media (max-width: 320px) {
+    padding: 8px 12px;
+
+    &__value {
+      @include font-template(14px, 18px);
+    }
+
+    &__type {
+      @include font-template(9px, 10px, 100);
+    }
+  }
 }

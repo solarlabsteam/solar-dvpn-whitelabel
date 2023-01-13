@@ -23,7 +23,6 @@ function draw(): void {
     size: props.size,
     background: 'transparent',
     foreground: 'black',
-    padding: 0
   });
 }
 

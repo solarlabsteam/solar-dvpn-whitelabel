@@ -40,4 +40,28 @@
   &__button-skip {
     color: var(--slr__btn-secondary-outline-clr);
   }
+
+  @media (max-width: 375px) {
+    &__title {
+      @include font-template(22px, 30px, 600);
+    }
+
+    &__text {
+      @include font-template(11px, 14px);
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__title {
+      @include font-template(20px, 30px, 600);
+    }
+
+    &__text {
+      @include font-template(10px, 14px);
+    }
+
+    &__content {
+      bottom: 5%;
+    }
+  }
 }

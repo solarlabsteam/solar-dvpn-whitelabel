@@ -32,4 +32,18 @@
   &__text {
     @include font-template(18px, 27px);
   }
+
+  @media (max-width: 320px) {
+    &__title {
+      @include font-template(20px, 26px, 500);
+    }
+
+    &__text {
+      @include font-template(14px, 20px);
+    }
+
+    &__info {
+      bottom: 5%;
+    }
+  }
 }

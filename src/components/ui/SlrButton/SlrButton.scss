@@ -3,8 +3,8 @@
   border: none;
   border-radius: 50px;
   margin: 0;
-  padding: 15px 40px;
   font-family: 'Poppins', sans-serif;
+  padding: 15px 40px;
   @include font-template(14px, 21px, 500);
 
   &--block {
@@ -71,12 +71,27 @@
   }
 
   &--text {
-    padding: unset;
+    padding: unset !important;
     background-color: var(--slr__btn-text-bg);
     color: var(--slr__btn-text-clr);
   }
 
   &--text#{&}--disabled {
     color: var(--slr__btn-text-disabled-clr);
+  }
+
+  @media (max-width: 375px) {
+    padding: 11px 30px;
+    @include font-template(12px, 21px, 500);
+
+    &--tiny {
+      padding: 6px 30px;
+      @include font-template(10px, 14px, 500);
+    }
+
+    &--large {
+      padding: 12px 30px;
+      @include font-template(16px, 24px, 500);
+    }
   }
 }

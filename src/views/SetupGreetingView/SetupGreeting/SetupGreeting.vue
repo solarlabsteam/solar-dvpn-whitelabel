@@ -59,5 +59,20 @@ const { openSetupOnboardingView } = useAppRouter();
     background-color: var(--slr__btn-secondary-disabled-bg);
     color: var(--slr__btn-secondary-disabled-clr);
   }
+
+  @media (max-width: 320px) {
+
+    &__info {
+      gap: 30px;
+    }
+
+    &__title {
+      @include font-template(40px, 50px, 700);
+    }
+
+    &__text {
+      @include font-template(14px, 20px);
+    }
+  }
 }
 </style>
