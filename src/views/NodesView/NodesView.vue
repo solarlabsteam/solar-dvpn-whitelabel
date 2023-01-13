@@ -4,16 +4,16 @@
       <slr-icon
         class="slr-clickable"
         :icon="'cross-active'"
-        :size="20"
+        :size="15"
         @click.prevent.stop="() => close()"
       />
     </template>
     <template #header-title>{{ t("node.list.title") }}</template>
     <template #header-action>
       <slr-button
-        class="r-s17-lh20 mnemonic-recover-btn"
+        class="mnemonic-recover-btn"
+        :variant="'text'"
         :tiny="true"
-        :text="true"
         @click="search"
       >
         {{ t("action.search") }}

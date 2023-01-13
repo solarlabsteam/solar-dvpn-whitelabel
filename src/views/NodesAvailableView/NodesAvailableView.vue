@@ -1,18 +1,21 @@
 <template>
   <slr-view>
     <template #header-nav>
-      <slr-button class="r-s17-lh20" :tiny="true" :text="true" @click="back">
-        {{ t("action.back") }}
-      </slr-button>
+      <slr-icon
+          class="slr-clickable"
+          :icon="'chevron-left'"
+          :size="19"
+          @click.prevent.stop="back"
+      />
     </template>
     <template #header-title>
       {{ `${t("node.list.title")} - ${location}` }}
     </template>
     <template #header-action>
       <slr-button
-        class="r-s17-lh20 mnemonic-recover-btn"
+        class="mnemonic-recover-btn"
+        :variant="'text'"
         :tiny="true"
-        :text="true"
         @click="search"
       >
         {{ t("action.search") }}
