@@ -1,18 +1,18 @@
 <template>
   <slr-view>
     <template #header-nav>
-      <slr-button class="r-s17-lh20" :tiny="true" :text="true" @click="back">
+      <slr-button :variant="'text'" :tiny="true" @click="back">
         {{ t("action.back") }}
       </slr-button>
     </template>
     <template #header-title>Recover with mnemonic</template>
     <template #header-action>
       <slr-button
-        class="r-s17-lh20 mnemonic-recover-btn"
+        class="mnemonic-recover-btn"
+        :variant="'text'"
         :tiny="true"
-        :text="true"
-        @click="done"
         :disabled="continueDisabled"
+        @click="done"
       >
         {{ t("action.done") }}
       </slr-button>

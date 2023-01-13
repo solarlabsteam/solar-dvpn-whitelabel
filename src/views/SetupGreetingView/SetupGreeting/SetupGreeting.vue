@@ -7,12 +7,12 @@
       <p class="setup-greeting__text" v-html="t('setup.greeting.text')"></p>
     </div>
     <slr-button
+      class="setup-greeting__btn"
       :block="true"
       :variant="'secondary'"
-      :light="true"
       :large="true"
       :shadow="true"
-      @click="openSetupActionsView"
+      @click="openSetupOnboardingView"
     >
       {{ t("account.getStarted") }}
     </slr-button>
@@ -24,7 +24,7 @@ import { useI18n } from "vue-i18n";
 import useAppRouter from "@/hooks/useAppRouter";
 
 const { t } = useI18n();
-const { openSetupActionsView } = useAppRouter();
+const { openSetupOnboardingView } = useAppRouter();
 </script>
 
 <style scoped lang="scss">
@@ -52,7 +52,12 @@ const { openSetupActionsView } = useAppRouter();
   }
 
   &__text {
-    @include font-template(18px, 27px, 400);
+    @include font-template(18px, 27px);
+  }
+
+  &__btn {
+    background-color: var(--slr__btn-secondary-disabled-bg);
+    color: var(--slr__btn-secondary-disabled-clr);
   }
 }
 </style>

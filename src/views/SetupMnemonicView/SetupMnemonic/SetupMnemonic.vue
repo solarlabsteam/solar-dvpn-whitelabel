@@ -24,8 +24,8 @@
 
       <slr-button
         :block="true"
-        :variant="'outline'"
-        :light="true"
+        :variant="'secondary'"
+        :outline="true"
         :large="true"
         :disabled="isWalletLoading"
         :to="{ name: 'recover-mnemonic' }"

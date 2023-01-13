@@ -23,7 +23,7 @@
     }
 
     &__text {
-      @include font-template(18px, 27px, 400);
+      @include font-template(18px, 27px);
     }
 
     &__phrase {
@@ -39,11 +39,11 @@
     &__phrase1 {
       table-layout: fixed;
       width: 100%;
-      color: #868686;
+      color: var(--slr__txt-secondary-clr);
       letter-spacing: 0.1em;
       text-transform: lowercase;
 
-      @include font-template(14px, 16px, 400);
+      @include font-template(14px, 16px);
     }
 
     &__phrase-row {

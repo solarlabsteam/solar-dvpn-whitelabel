@@ -2,6 +2,7 @@ import { useRouter } from "vue-router";
 
 export default function useAppRouter(): {
   openSetupGreetingView(): void;
+  openSetupOnboardingView(): void;
   openSetupActionsView(): void;
   openSetupCreateView(mnemonic: string): void;
   openSetupRecoverView(): void;
@@ -18,6 +19,10 @@ export default function useAppRouter(): {
 
   const openSetupGreetingView = (): void => {
     router.push({ name: "setup" });
+  };
+
+  const openSetupOnboardingView = (): void => {
+    router.push({ name: "onboarding" });
   };
 
   const openSetupActionsView = (): void => {
@@ -81,6 +86,7 @@ export default function useAppRouter(): {
 
   return {
     openSetupGreetingView,
+    openSetupOnboardingView,
     openSetupActionsView,
     openSetupCreateView,
     openSetupRecoverView,

@@ -16,6 +16,7 @@ import NodesView from "@/views/NodesView";
 import SettingsDnsView from "@/views/SettingsDnsView";
 import NodesAvailableView from "@/views/NodesAvailableView";
 import NodesSearchView from "@/views/NodesSearchView";
+import SetupOnboardingView from "@/views/SetupOnboardingView";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -64,6 +65,11 @@ const routes: RouteRecordRaw[] = [
         path: "",
         component: SetupGreetingView,
         name: "greeting",
+      },
+      {
+        path: "onboarding",
+        component: SetupOnboardingView,
+        name: "onboarding",
       },
       {
         path: "mnemonic",

@@ -1,7 +1,7 @@
 <template>
   <slr-view>
     <template #header-nav>
-      <slr-button class="r-s17-lh20" :tiny="true" :text="true" @click="back">
+      <slr-button :variant="'text'" :tiny="true" @click="back">
         {{ t("action.back") }}
       </slr-button>
     </template>

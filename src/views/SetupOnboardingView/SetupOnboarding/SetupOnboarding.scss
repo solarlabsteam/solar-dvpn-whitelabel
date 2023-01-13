@@ -1,0 +1,43 @@
+.setup-onboarding {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    bottom: 10%;
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    color: var(--slr__title-txt-clr);
+    @include font-template(24px, 36px, 600);
+  }
+
+  &__text {
+    color: var(--slr__setup-onboarding-txt-clr);
+    @include font-template(12px, 18px);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__button-skip {
+    color: var(--slr__btn-secondary-outline-clr);
+  }
+}

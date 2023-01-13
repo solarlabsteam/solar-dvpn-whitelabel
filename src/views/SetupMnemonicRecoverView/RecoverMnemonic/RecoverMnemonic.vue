@@ -59,16 +59,17 @@ const paste = (e: ClipboardEvent) => {
   &__field {
     display: flex;
     align-items: center;
-    outline: 1px solid #515151;
+    outline: 1px solid var(--slr__border-clr);
     border-radius: 21px;
     background-color: var(--slr__body-bg-clr);
   }
 
   &__field-pretend {
     padding: 11px;
-    outline: 1px solid #515151;
+    outline: 1px solid var(--slr__border-clr);
     border-radius: 21px;
-    background-color: var(--slr__border-clr);
+    background-color: var(--slr__recover-mnemonic-field-bg);
+    color: var(--slr__recover-mnemonic-field-clr);
     width: 53px;
     height: 100%;
     box-sizing: border-box;

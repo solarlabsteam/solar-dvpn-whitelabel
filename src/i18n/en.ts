@@ -14,6 +14,20 @@ export default {
       title: "<span class='text-blue'>Blue</span>VPN",
       text: "With <span class='text-blue'>BlueVPN</span> your traffic is <span class='text-blue'>encrypted</span>, your IP address is hidden, and above all, your <span class='text-blue'>privacy</span> is upheld",
     },
+    onboarding: {
+      encryption: {
+        title: "<span class='text-blue'>BlueVPN</span> encrypts your traffic",
+        text: "Stay <span class='text-blue'>hidden</span> online with our VPN and surf the web without any trace of your location or activity going back to your ISP."
+      },
+      freedom: {
+        title: "Browse the Internet <span class='text-blue'>freely</span>.",
+        text: "Unlock access to restricted <span class='text-blue'>websites</span> with our VPN and browse the internet freely."
+      },
+      safety: {
+        title: "Stay <span class='text-blue'>safe</span> with BlueVPN",
+        text: "Stay safe and <span class='text-blue'>secure</span> online with our VPN, the ultimate <span class='text-blue'>shield</span> for your personal information and internet activity."
+      }
+    },
     complete: {
       title: "You’re all set!",
       text: "Enjoy <span class='text-blue'>secure</span> & <span class='text-blue'>censorship</span>-free connectivity <span class='text-blue'>with dVPN!</span>",
@@ -144,6 +158,8 @@ export default {
     retry: "Retry",
     switch: "Switch",
     search: "Search",
+    next: "Next",
+    skip: "Skip"
   },
 
   subscriptionModal: {
