@@ -46,7 +46,7 @@
       </div>
     </template>
     <template #footer>
-      <div class="nodes-filters-modal__controls mt-4">
+      <div class="nodes-filters-modal__controls">
         <slr-button
           class="text-capitalize"
           :variant="'primary'"
