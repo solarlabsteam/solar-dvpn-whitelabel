@@ -18,17 +18,7 @@
         <slot name="header-action" />
       </div>
     </div>
-    <div
-      class="slr-view__content"
-      :style="{
-        // height:
-        //   $slots['header-nav'] ||
-        //   $slots['header-title'] ||
-        //   $slots['header-action']
-        //     ? '92%'
-        //     : '100%',
-      }"
-    >
+    <div class="slr-view__content">
       <slot name="content" />
     </div>
   </div>
@@ -74,7 +64,7 @@
   &__content {
     display: flex;
     flex: 1;
-    height: calc(100% - 56px);
+    height: calc(100% - 75px);
   }
 }
 </style>
