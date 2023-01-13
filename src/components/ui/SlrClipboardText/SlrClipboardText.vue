@@ -1,8 +1,6 @@
 <template>
   <p class="slr-clipboard-text">
-    <slot>
-      {{ text }}
-    </slot>
+    <slot />
 
     <slr-copy-button :value="text" :placement="placement" />
   </p>

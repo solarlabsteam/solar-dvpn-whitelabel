@@ -28,9 +28,4 @@
     border-radius: 50px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
-
-  &__unblur-button {
-    padding: 15px 40px;
-    @include font-template(14px, 21px, 500);
-  }
 }

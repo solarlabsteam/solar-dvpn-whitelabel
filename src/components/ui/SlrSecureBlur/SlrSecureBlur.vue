@@ -9,12 +9,7 @@
 
     <div v-if="isBlurred" class="slr-secure-blur__overlay">
       <div class="slr-secure-blur__button-wrapper">
-        <slr-button
-          :variant="'primary'"
-          :light="true"
-          class="slr-secure-blur__unblur-button"
-          @click="unblur"
-        >
+        <slr-button :variant="'info'" @click="unblur">
           <span class="text-uppercase">{{ t("action.unblur") }}</span>
         </slr-button>
       </div>

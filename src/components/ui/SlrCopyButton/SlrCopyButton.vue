@@ -7,13 +7,13 @@
     :class="wrapperClassName"
   >
     <slr-button
+      class="slr-copy-button__btn"
       v-clipboard:copy="value"
       v-clipboard:success="onCopy"
-      :text="true"
-      :tiny="true"
+      :variant="'light'"
       v-bind="$attrs"
     >
-      <slr-icon :width="16" :height="19" :icon="'copy'" />
+      {{ t('action.copy') }}
     </slr-button>
   </slr-popper>
 </template>
@@ -59,4 +59,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped />
+<style lang="scss" scoped>
+.slr-copy-button__btn {
+  padding: 6px 44px;
+  border: 1px solid var(--slr__border-clr);
+  @include font-template(10px, 15px);
+}
+</style>
