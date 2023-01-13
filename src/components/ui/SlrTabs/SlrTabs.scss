@@ -18,12 +18,12 @@
     margin: 7px;
     text-align: center;
     color: var(--slr__tabs-clr);
+    border-radius: 32px;
     @include font-template(13px, 17px);
 
     &--active {
       color: var(--slr--tab-txt-clr);
       background-color: var(--slr--tab-bg-active);
-      border-radius: 32px;
     }
   }
 
