@@ -1,7 +1,6 @@
 .settings-section {
 
-  &__content {
-  }
+  &__content {}
 
   &__header {
     display: flex;
@@ -13,10 +12,13 @@
 
   &__header-title {
     color: var(--slr__title-txt-clr);
+    @include font-template(16px, 24px, 600);
   }
 
   &__header-subtitle {
-    @include font-template(15px, 18px);
+    text-align: right;
+    color: var(--slr__txt-secondary-clr);
+    @include font-template(12px, 19px);
   }
 
   &__buttons {

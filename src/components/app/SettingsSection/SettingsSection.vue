@@ -5,7 +5,7 @@
         <div class="settings-section__header-title">{{ title }}</div>
         <div class="settings-section__header-subtitle">{{ subtitle }}</div>
       </div>
-      <div class="mb-3" v-if="$slots['content']">
+      <div :class="{'mb-3': !!$slots['buttons']}" v-if="$slots['content']">
         <slot name="content" />
       </div>
     </div>
