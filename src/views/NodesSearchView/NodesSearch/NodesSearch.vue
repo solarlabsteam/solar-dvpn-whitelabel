@@ -18,7 +18,7 @@
       :title="t('node.list.loadingFailure.title')"
       :text="t('node.list.loadingFailure.text')"
       :action-text="t('action.retry')"
-      :action="fetchNodes"
+      :action="reloadNodes"
     />
 
     <nodes-list
@@ -34,7 +34,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { ref, watch } from "vue";
-import type { ContinentCode, NodesSearchParameters } from "@/types";
+import type { ContinentCode } from "@/types";
 import SlrLinearLoader from "@/components/ui/SlrLinearLoader";
 import NodesList from "@/components/app/NodesList";
 import NoData from "@/components/app/NoData";
@@ -73,13 +73,21 @@ const loadMore = () => {
   }
 };
 
-const fetchNodes = (params?: NodesSearchParameters) => {
-  loadAvailableNodes(params);
+const reloadNodes = () => {
+  const { query, countryCode, continentCode, orderBy, minPrice, maxPrice } = filters.value;
+  loadAvailableNodes({
+    query,
+    country: countryCode === "any" ? undefined : countryCode,
+    continent: continentCode === "any" ? undefined : (continentCode as ContinentCode),
+    minPrice: Number(minPrice) * 1e6,
+    maxPrice: Number(maxPrice) * 1e6,
+    orderBy,
+  });
 };
 
 watch(
   displayedCountry,
-  (countryCode) => countryCode && fetchNodes({ country: countryCode })
+  (countryCode) => countryCode && loadAvailableNodes({ country: countryCode })
 );
 
 watch(searchString, async (query) => {
@@ -91,8 +99,8 @@ watch(searchString, async (query) => {
     filters.value;
   await loadAvailableNodes({
     query,
-    country: countryCode,
-    continent: continentCode ? (continentCode as ContinentCode) : undefined,
+    country: countryCode === "any" ? undefined : countryCode,
+    continent: continentCode === "any" ? undefined : (continentCode as ContinentCode),
     minPrice: Number(minPrice) * 1e6,
     maxPrice: Number(maxPrice) * 1e6,
     orderBy,

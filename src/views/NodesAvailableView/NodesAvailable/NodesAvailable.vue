@@ -18,7 +18,7 @@
       :title="t('node.list.loadingFailure.title')"
       :text="t('node.list.loadingFailure.text')"
       :action-text="t('action.retry')"
-      :action="fetchNodes"
+      :action="reloadNodes"
     />
 
     <nodes-list v-else :nodes="nodes" :select="select" :load-more="loadMore" />
@@ -28,11 +28,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { computed, watch } from "vue";
-import type {
-  ContinentCode,
-  CountryNodesInfo,
-  NodesSearchParameters,
-} from "@/types";
+import type { ContinentCode, CountryNodesInfo } from "@/types";
 import SlrLinearLoader from "@/components/ui/SlrLinearLoader";
 import NodesList from "@/components/app/NodesList";
 import CountriesList from "@/components/app/CountriesList";
@@ -40,6 +36,7 @@ import NoData from "@/components/app/NoData";
 import useConnection from "@/hooks/useConnection";
 import useAppRouter from "@/hooks/useAppRouter";
 import useNodes from "@/hooks/useNodes";
+import useNodesFilters from "@/hooks/useNodesFilters";
 
 const props = defineProps<{
   continentCode?: ContinentCode;
@@ -58,6 +55,7 @@ const {
   loadAvailableNodes,
   loadMoreAvailableNodes,
 } = useNodes();
+const { filters } = useNodesFilters();
 
 const countryNodesCount = computed<CountryNodesInfo[]>(
   () =>
@@ -79,13 +77,21 @@ const loadMore = () => {
   }
 };
 
-const fetchNodes = (params?: NodesSearchParameters) => {
-  loadAvailableNodes(params);
+const reloadNodes = () => {
+  const { query, countryCode, continentCode, orderBy, minPrice, maxPrice } = filters.value;
+  loadAvailableNodes({
+    query,
+    country: countryCode === "any" ? undefined : countryCode,
+    continent: continentCode === "any" ? undefined : (continentCode as ContinentCode),
+    minPrice: Number(minPrice) * 1e6,
+    maxPrice: Number(maxPrice) * 1e6,
+    orderBy,
+  });
 };
 
 watch(
   () => props.countryCode,
-  (countryCode) => countryCode && fetchNodes({ country: countryCode })
+  (countryCode) => countryCode && loadAvailableNodes({ country: countryCode })
 );
 </script>
 
