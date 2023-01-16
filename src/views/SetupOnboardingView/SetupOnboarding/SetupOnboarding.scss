@@ -9,15 +9,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  gap: 5%;
 
   &__content {
+    flex: 1;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    height: 100%;
-    bottom: 10%;
   }
 
   &__title {
@@ -78,9 +78,11 @@
     &__text {
       @include font-template(12px, 14px);
     }
+  }
 
-    &__content {
-      bottom: 5%;
+  @media (max-width: 320px) {
+    & {
+      gap: 2%;
     }
   }
 }

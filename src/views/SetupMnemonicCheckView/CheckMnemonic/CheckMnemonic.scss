@@ -27,16 +27,6 @@
   }
 
   &__phrase {
-    display: grid;
-    grid-template-columns: 1fr 1fr 0fr;
-    grid-template-rows: repeat(24);
-    margin-left: 25px;
-    padding: 16px;
-    text-align: left;
-    @include font-template(14px, 18px);
-  }
-
-  &__phrase1 {
     table-layout: fixed;
     width: 100%;
     color: var(--slr__txt-secondary-clr);
@@ -85,6 +75,13 @@
   &__timer {
     color: var(--slr__setup-timer-clr);
     @include font-template(28px, 34px, 300);
+  }
+
+  @media (max-width: 375px) {
+    &__phrase-cell-value {
+      text-align: left;
+      width: 100%;
+    }
   }
 
   @media (max-width: 320px) {

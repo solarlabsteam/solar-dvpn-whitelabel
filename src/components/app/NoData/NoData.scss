@@ -5,6 +5,7 @@
   align-items: center;
   height: 100%;
   color: var(--slr__title-txt-clr);
+  text-align: center;
 
   &__title {
     margin-top: 27px;
@@ -13,7 +14,6 @@
   }
 
   &__text {
-    text-align: center;
     @include font-template(16px, 24px);
   }
 }

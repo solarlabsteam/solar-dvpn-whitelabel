@@ -15,7 +15,6 @@
       <slr-button
         class="mnemonic-recover-btn"
         :variant="'text'"
-        :tiny="true"
         @click="search"
       >
         {{ t("action.search") }}

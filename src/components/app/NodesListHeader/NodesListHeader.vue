@@ -2,7 +2,7 @@
   <div class="nodes-list-header__header px-0 py-0 mb-4">
     <div class="nodes-list-header__back-btn">
       <slr-icon :icon="'chevron-left'" :width="9" :height="14" />
-      <slr-button class="m-s13-lh16" :tiny="true" :text="true" @click="back">
+      <slr-button class="m-s13-lh16" :text="true" @click="back">
         {{ t("action.back") }}
       </slr-button>
     </div>

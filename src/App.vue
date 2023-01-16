@@ -158,6 +158,19 @@ html {
   -webkit-user-select: none;
 }
 
+@media screen and (min-width: 320px) and (max-width: 926px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -194,7 +207,7 @@ body {
   color: white;
   width: 100%;
   overflow-x: auto;
-  z-index: 100;
+  z-index: 1000;
   box-sizing: border-box;
   word-break: break-all;
 }

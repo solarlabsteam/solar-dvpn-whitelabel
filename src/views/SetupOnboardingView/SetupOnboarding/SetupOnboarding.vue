@@ -19,14 +19,12 @@
       <slr-button
         class="setup-onboarding__button-skip"
         :variant="'text'"
-        :tiny="true"
         @click="openSetupActionsView"
       >
         {{ t('action.skip') }}
       </slr-button>
       <slr-button
         :variant="'primary'"
-        :tiny="true"
         @click="openNextOnboardingView"
       >
         {{ t('action.next') }}

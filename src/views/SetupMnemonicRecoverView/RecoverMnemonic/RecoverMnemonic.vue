@@ -59,19 +59,20 @@ const paste = (e: ClipboardEvent) => {
   &__field {
     display: flex;
     align-items: center;
-    outline: 1px solid var(--slr__border-clr);
+    border: 1px solid var(--slr__border-clr);
     border-radius: 21px;
     background-color: var(--slr__body-bg-clr);
   }
 
   &__field-pretend {
+    margin-left: -1px;
     padding: 11px;
-    outline: 1px solid var(--slr__border-clr);
+    border: 1px solid var(--slr__border-clr);
     border-radius: 21px;
     background-color: var(--slr__recover-mnemonic-field-bg);
     color: var(--slr__recover-mnemonic-field-clr);
     width: 53px;
-    height: 100%;
+    height: calc(100% + 2px);
     box-sizing: border-box;
   }
 

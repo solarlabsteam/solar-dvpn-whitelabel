@@ -1,7 +1,7 @@
 <template>
   <slr-view>
     <template #header-nav>
-      <slr-button :variant="'text'" :tiny="true" @click="back">
+      <slr-button :variant="'text'" @click="back">
         {{ t("action.back") }}
       </slr-button>
     </template>
@@ -10,7 +10,6 @@
       <slr-button
         class="mnemonic-recover-btn"
         :variant="'text'"
-        :tiny="true"
         :disabled="continueDisabled"
         @click="done"
       >

@@ -2,7 +2,7 @@
   <div class="check-mnemonic">
     <div class="check-mnemonic__info">
       <slr-secure-blur class="check-mnemonic__blur">
-        <table class="check-mnemonic__phrase1">
+        <table class="check-mnemonic__phrase">
           <tr v-for="r in 8" class="check-mnemonic__phrase-row">
             <td v-for="c in 3"
                 class="check-mnemonic__phrase-cell"

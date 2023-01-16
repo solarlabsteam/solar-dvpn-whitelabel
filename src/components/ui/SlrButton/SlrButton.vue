@@ -5,7 +5,11 @@
     :disabled="disabled || loading"
     @click="onClick"
   >
-    <slr-loader v-if="loading" :size="15" />
+    <template v-if="loading">
+      &nbsp;
+      <slr-loader :size="15" />
+      &nbsp;
+    </template>
     <slot v-else name="default" :loading="loading" />
   </button>
 </template>
