@@ -197,4 +197,13 @@ export default {
       buyNow: "Buy now",
     },
   },
+
+  error: {
+    server: "Internal server error",
+    noConnection: "Please check if you are connected to the Internet and try again.",
+    missing_mnemonic: "Failed to load mnemonic from keychain",
+    empty_input: "Mnemonic is empty",
+    invalid_input: "Mnemonic is invalid",
+    saving_error: "Failed to save mnemonic to keychain"
+  }
 };
