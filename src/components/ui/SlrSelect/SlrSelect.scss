@@ -7,6 +7,10 @@
   width: 100%;
   padding: 11px 12px;
   background: var(--slr__body-bg-clr);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  @include font-template(14px, 20px);
 
   &--focused {
     border-color: $slr__clr-blue-6;
